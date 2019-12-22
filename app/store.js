@@ -1,4 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose} from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import _throttle from 'lodash.throttle';
 import rootReducer from './reducers';
@@ -22,7 +23,15 @@ const persistedData = {
     errors: {},
   },
 };
-const store = createStore(rootReducer, persistedData, applyMiddleware(...middleware));
+
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  rootReducer,
+  persistedData,
+  composeWithDevTools(applyMiddleware(...middleware)
+  ))
+
 
 store.subscribe(_throttle(() => {
   saveQueueState(store.getState());

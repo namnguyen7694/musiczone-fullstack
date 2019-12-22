@@ -6,7 +6,7 @@ import Choices from './Choices';
 import './index.sass';
 
 class ChartPanel extends React.Component {
-  state = { activeChart: 'pop' }
+  state = { activeChart: 'vpop' }
 
   handleOnClick(alias) {
     this.props.changeActiveChart(alias);

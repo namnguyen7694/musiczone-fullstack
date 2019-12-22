@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import PropTypes from 'prop-types';
 import { changeAlias } from '../../utils/func';
-import { Genres } from '../../../seed';
+import { Genres } from '../../../seed';  //static data export from server
 import './index.sass';
 
 const GenreMenu = ({ genres = Genres, type }) => {

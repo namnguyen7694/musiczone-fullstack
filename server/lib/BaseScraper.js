@@ -1,6 +1,5 @@
 /**
  *@description a library that can scrape anything from http://mp3.zing.vn
- *@author anhthi https://github.com/dkakashi69
 */
 
 const cheerio = require('cheerio');

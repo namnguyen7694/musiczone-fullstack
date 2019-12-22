@@ -166,8 +166,10 @@ class Player extends React.PureComponent {
       updateLyric,
     } = this.props;
 
-
-    // reset lyric state
+/**
+ * @todo update Lyric
+ */
+   
     if (this.audio.currentTime > lyric[lyric.length - 1].end || this.audio.currentTime) {
       // clear lyric when the this.audio is playing with beat only
       updateLyric([], []);

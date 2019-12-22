@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
 
 const datas = {
-  'ZWZB96AB': 'Popular songs',
-  // 'ZWZB96DC': 'Popular Korean songs',
   'ZWZB969F': 'Tru tinh songs',
+  'ZWZB96AB': 'Popular songs',
+  'ZWZB96DC': 'Popular Korean songs',
   'ZWZB969E': 'Popular Vietnamese songs',
 };
 

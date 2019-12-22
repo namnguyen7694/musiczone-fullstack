@@ -2,10 +2,13 @@
 const { request } = require('utils');
 
 module.exports = function getTop100(req, res, next) {
-  const [popId, kpopId, vpopId] = ['ZWZB96AB', 'ZWZB969F', 'ZWZB969E'];
+  const [ttId, popId, kpopId, vpopId] = ['ZWZB969F', 'ZWZB96AB', 'ZWZB96DC', 'ZWZB969E'];
   let id;
 
   switch (req.params.type) {
+  case ttId:
+    id = ttId;
+    break;
   case popId:
     id = popId;
     break;

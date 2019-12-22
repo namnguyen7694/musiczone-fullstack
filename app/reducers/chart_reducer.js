@@ -4,7 +4,7 @@ const initialState = {
   pop: {},
   kpop: {},
   vpop: {},
-  activeChart: 'pop',
+  activeChart: 'vpop',
 };
 
 export default function (state = initialState, action) {
