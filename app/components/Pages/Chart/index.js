@@ -2,7 +2,7 @@ import React from 'react';
 import Chart from '../../Chart';
 import './index.sass';
 
-const ChartPage = ({ pop, kpop, vpop }) => {
+const ChartPage = ({ vpop, kpop, pop }) => {
   return (
     <div className="chart-page">
       <div className="chart-page-chart">
@@ -14,7 +14,6 @@ const ChartPage = ({ pop, kpop, vpop }) => {
       <div className="chart-page-chart">
         <Chart chart={kpop} />
       </div>
-      
     </div>
   );
 };

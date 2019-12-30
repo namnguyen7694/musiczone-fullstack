@@ -8,11 +8,11 @@ import { loadUserData } from './localStorage';
 
 export function fetchDataForHomePage() {
   const state = store.getState();
-  // Only fetch `pop` chart if there isn't one else get it from the state
-  if (isEmpty(state.chartState.pop)) {
-    store.dispatch(getChart('pop'));
+  // Only fetch `vpop` chart if there isn't one else get it from the state
+  if (isEmpty(state.chartState.vpop)) {
+    store.dispatch(getChart('vpop'));
   } else {
-    store.dispatch(changeActiveChart('pop'));
+    store.dispatch(changeActiveChart('vpop'));
   }
 
   if (!state.trackState.tracks.length) {

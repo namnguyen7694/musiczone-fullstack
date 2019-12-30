@@ -23,8 +23,8 @@ const Playlist = (props) => {
             {song.artist_text || <LinksByComma
               data={song.artists}
               titleEntry="name"
-              pathEntry="alias"
-              definePath={(alias) => `/artist/${alias}`}
+              pathEntry="link"
+              definePath={(link) => link.replace('/nghe-si/', '/artist/')}
             />}
           </div>
           {/* <div className="playlist-track-actions">

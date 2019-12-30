@@ -15,9 +15,9 @@ class ChartPanel extends React.Component {
 
   render() {
     const list = [
+      { alias: 'vpop', title: 'V-Pop Chart' },
       { alias: 'pop', title: 'Top 10 Billboard' },
       { alias: 'kpop', title: 'K-Pop Chart' },
-      { alias: 'vpop', title: 'V-Pop Chart' },
     ];
     const { activeChart } = this.state;
     return (

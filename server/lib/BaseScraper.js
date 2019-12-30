@@ -23,7 +23,7 @@ BaseScraper.prototype.testSelector = function (attr) {
 };
 
 BaseScraper.prototype.extract = function (attr, selector, outputKey) {
-  this.testSelector(selector); // test the attr to see if it is valid
+  this.testSelector(selector); // test the selection to see if it is valid
   const $el = this.$root.find(selector);
   const data = this.attr($el, attr);
   this.result[outputKey] = data;

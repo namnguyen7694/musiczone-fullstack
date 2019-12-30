@@ -5,8 +5,9 @@ import LazyloadImage from '../../LazyloadImage';
 import './artist_card.sass';
 
 const ArtistCard = (props) => {
-  const url = `/artist/${changeAlias(props.name)}`;
-
+  const link = props.link.replace('/nghe-si', '');
+  const url = `/artist${link}`;
+  
   return (
     <div className="artist-card">
       <Link to={url}>

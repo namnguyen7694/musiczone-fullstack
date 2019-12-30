@@ -11,7 +11,7 @@ module.exports = function getAlbums(req, res, next) {
         .list('.pone-of-five .item')
         .setKey('artist')
         .extractAttr('src', 'img', 'thumb')
-        .extractAttr('text', 'a.txt-primary', 'name')
+        .extractAttrs(['href', 'text'], 'a.txt-primary', ['link', 'name'])
         .paginate();
 
       res.json(parser.get());

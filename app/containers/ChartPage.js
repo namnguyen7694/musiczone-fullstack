@@ -7,9 +7,9 @@ class ChartPage extends Component {
   render() {
     return (
       <Pages.ChartPage
+        vpop={this.props.vpop}
         pop={this.props.pop}
         kpop={this.props.kpop}
-        vpop={this.props.vpop}
       />
     );
   }

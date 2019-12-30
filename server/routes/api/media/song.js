@@ -9,12 +9,14 @@ module.exports = function getSong(req, res, next) {
 
   co(function* () {
     const html = yield request(`https://mp3.zing.vn/bai-hat/${name}/${id}.html`);
-    const regex = /media\/get-source\?type=audio&key=.{33}/; // get the resouce url
-    const match = html.match(regex);
+    const regex_audio = /media\/get-source\?type=audio&key=.{33}/; // get the resouce url
+    const regex_video = /media\/get-source\?type=video&key=.{33}/; // get the resouce url if media has video type
+    const match = html.match(regex_audio) || html.match(regex_video).toString().replace(/video/g, "audio");
+
     if (!match) throw new Error("can't find the resource URL");
 
-    const [matchUrl] = match;
-    const resource = yield request(`https://mp3.zing.vn/xhr/${matchUrl}`);
+    const matchUrl = match ;
+    const resource = yield request(`https://mp3.zing.vn/xhr/${matchUrl}`);  
     const data = JSON.parse(resource).data;
     // data.lyric now is a url
     if (!data.lyric.trim()) {
